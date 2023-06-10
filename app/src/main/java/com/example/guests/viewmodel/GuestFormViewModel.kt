@@ -12,7 +12,7 @@ import com.example.guests.repository.GuestRepository
 class GuestFormViewModel(application: Application) : AndroidViewModel(application) {
 
     // Ligo o banco
-    private val repository = GuestRepository.getInstance(application)
+    private val repository = GuestRepository(application)
 
     private val guestModel = MutableLiveData<GuestModel>()
     val guest: LiveData<GuestModel> = guestModel
